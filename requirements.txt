@@ -1,0 +1,7 @@
+Cython==0.28.2
+Flask==1.0.2
+gunicorn==19.8.1
+requests==2.18.4
+fasttext==0.8.3
+fbmessenger==5.1.0
+python-env==1.0.0

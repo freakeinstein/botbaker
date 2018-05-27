@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="left-main-container">
+                <div class="header">
+                    <a href="https://a-mma.in"><img src="https://avatars2.githubusercontent.com/u/37766717?s=400&u=cc1a991ca977d3c9f9196475aa77602ad18ef9f5&v=4" /></a>
+                    <span>Teach your bot</span>
+                    <button onclick="add_block()">add new intent</button>
+                </div>
+                <div class="remaining">
+                    <div class="seperator"></div>
+                    <button class="main-button" id="train-button" onclick="train_agent()">start training</button>
+                    <div class="seperator"></div>
+                    <!-- <div class="example-block">
+                        <div class="seperator"></div>
+                        <div class="qcontainer">
+                            <input type="text" />
+                            <button onclick="add_question(this.id)">add</button>
+                            <div class="question-container">
+                                <div class="span"><span>This is question example</span></div>
+                                <div class="span_c"><button>delete</button></div>
+                            </div>
+                        </div>
+                        <div class="seperator"></div>
+                        <div class="acontainer">
+                            <input type="text" />
+                            <button onclick="add_answer(this.id)">add</button>
+                            <div class="question-container">
+                                <div class="span"><span>This is answer example</span></div>
+                                <div class="span_c"><button>delete</button></div>
+                            </div>
+                        </div>
+                        <div class="seperator"></div>
+                    </div> -->
+
+                    <div class="footer">
+                    </div>
+                </div>
+            </div>
+            <div class="right-main-container">
+                <div class="header"><span>Test your bot</span></div>
+                <div class="seperator"></div>
+                <input type="text" class="chatbox" placeholder="enter your query" />
+                <div class="seperator"></div>
+                <button onclick="test()">test</button>
+                <div class="seperator"></div>
+                <div class="remaining">    
+                </div>                    
+            </div>
+        </div>
+    </body>
+</html>

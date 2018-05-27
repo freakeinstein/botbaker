@@ -1,0 +1,181 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html,body { 
+    height: 100%;
+    text-align: center;
+}
+.main-container{
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.main-container .footer{
+    width: 100%;
+    height: 100px;
+}
+.left-main-container{
+    width: 70%;
+    height: 100%;
+    float: left;
+}
+.right-main-container{
+    width: 30%;
+    height: 100%;
+    float: left;
+    background-color: #e6e6e6; 
+}
+.right-main-container .header{
+    color: white;
+    padding: 20px;
+    background-color: #ff0066; 
+}
+.right-main-container .seperator{
+    width: 100%;
+    height: 10px;
+}
+.right-main-container .chatbox{
+    width: 80%;
+    padding: 10px;
+}
+.right-main-container button{
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px;
+    width: 50%;
+    background-color: #adebad;
+    border: 2px solid #4CAF50;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.right-main-container button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+.right-main-container .remaining{
+    width: 100%;
+    height: 100%;
+}
+.right-main-container .remaining .user-bubble{
+    width: 100%;
+    text-align: right;
+}
+.right-main-container .remaining .user-bubble p{
+    margin-top: 10px;
+    width: 70%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-right: 5%;
+    background-color: #ff99cc;
+    float: right;
+}
+.right-main-container .remaining .bot-bubble{
+    width: 100%;
+    text-align: left;
+}
+.right-main-container .remaining .bot-bubble p{
+    margin-top: 10px;
+    width: 70%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 5%;
+    background-color: #ff99cc;
+    float: left;
+}
+.left-main-container .header{
+    color: white;
+    padding: 20px;
+    background-color: #1a8cff; 
+}
+.left-main-container .header img{
+    position: fixed;
+    top: 0px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+}
+.left-main-container .header button{
+    float: right;
+}
+.left-main-container .remaining{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+.left-main-container .example-block{
+    width: 98%;
+    background-color: #cceeff;
+    border-radius: 10px;
+    margin-left: 1%;
+    padding-top: 10px;
+}
+.left-main-container .button {
+  text-decoration: none;
+  background-color: #66b3ff;
+  border: 3px solid #cceeff;
+  color: #333333;
+  padding: 5px 10px 5px 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  cursor: context-menu;
+}
+.left-main-container .button:hover {
+  background-color: #3399ff;
+}
+.left-main-container .qcontainer{
+    width: 100%;
+}
+.left-main-container .question-container{
+    padding-top: 10px;
+    width: 100%;
+    text-align: left;
+    /*float: left;*/
+}
+.left-main-container .question-container .span{
+    width: 70%;
+    float: left;
+    padding-left: 7%;
+}
+.left-main-container .question-container .spanc{
+    width: 20%;
+    float: left;
+}
+.left-main-container .question-container button{
+    /*float :left;*/
+}
+.left-main-container .acontainer{
+    width: 100%;
+}
+.left-main-container .remaining .seperator{
+    width: 100%;
+    height: 10px;
+}
+.left-main-container .remaining .example-block .seperator{
+    width: 100%;
+    height: 10px;
+}
+.left-main-container .remaining .example-block input{
+    width: 80%;
+    margin-right: 1%;
+}
+.left-main-container .remaining .main-button{
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px;
+    width: 50%;
+    background-color: #adebad;
+    border: 2px solid #4CAF50;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.left-main-container .remaining .main-button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
