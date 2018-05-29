@@ -28,12 +28,25 @@ function parse_data(){
         })
         data.push(example_dic)
     })
-    console.log(data)
     return data
 }
 
 function train_agent(){
     var assembled_data = parse_data()
+    if($("#check-contrib").is(":checked")) {
+        $.ajax({
+            type: 'POST',
+            url: 'https://botbakerservice.herokuapp.com/contribute/classification/push',
+            data: JSON.stringify({"data":assembled_data}),
+            success: function(resp) {
+                console.log('thanks, data shared with a-mma')
+            },
+            error: function (jqXHR, exception){console.log('sorry, data sharing with a-mma somehow failed')},
+            contentType: "application/json",
+            dataType: 'json'
+        })
+    }
+
     $("#train-button").text('training agent..')
     $.ajax({
         type: 'POST',
