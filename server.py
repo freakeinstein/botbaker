@@ -18,6 +18,8 @@ from channels.messenger import Messenger
 training_data_file_name = './data/train/training_data.txt'
 stories_file_name = './data/train/stories.json'
 model_file_name = './data/models/posttrained/model'
+pretrained_vec_file_name = './data/models/pretrained/model.vec'
+pretrained_vec_dimension = 300
 
 
 def messenger_callback(input_data):
@@ -26,13 +28,13 @@ def messenger_callback(input_data):
 
 def run_prediction(input_data):
     predicted_label = classifier.predict(input_data)
-    stories_file = open(stories_file_name,'r')
+    stories_file = open(stories_file_name, mode='r', encoding='utf-8')
     answer = json.loads(stories_file.read())[predicted_label[0][0]]
     answer = answer[random.randrange(len(answer))]
     return answer
 
 # setup fasttext classifier
-classifier = Fsttext(training_data_file_name, model_file_name)
+classifier = Fsttext(training_data_file_name, model_file_name, pretrained_vec_file_name, pretrained_vec_dimension)
 # setup messenger channel
 messenger = Messenger(os.environ.get('FB_VERIFY_TOKEN'), os.environ.get('FB_PAGE_TOKEN'), messenger_callback)
 
@@ -47,9 +49,9 @@ def predict():
 def index():
     if request.method == 'POST':
         input_data = request.get_json()['data']
-        training_data_file = open(training_data_file_name,'w')
+        training_data_file = open(training_data_file_name, mode='w', encoding='utf-8')
         training_data = ''
-        stories_file = open(stories_file_name,'w')
+        stories_file = open(stories_file_name, mode='w', encoding='utf-8')
         stories_data = {}
         counter = -1
         for example in input_data:
