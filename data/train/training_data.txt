@@ -1,0 +1,7 @@
+__label__0 buy this
+__label__0 buy now
+__label__0 buy this now
+__label__1 hello
+__label__1 hi
+__label__1 hey
+__label__1 hello friend
