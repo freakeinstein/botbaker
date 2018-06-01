@@ -1,5 +1,5 @@
 # botbaker
-Indic bot builder
+Open Indic bot builder
 
 > This repo is not official a-mma project. Its maintained by a person or a group at a-mma repository as part of a-mma after effects. 
 
